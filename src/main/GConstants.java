@@ -48,8 +48,8 @@ public class GConstants {
 	public static final BasicStroke SOLID_STROKE = new BasicStroke(1,BasicStroke.CAP_ROUND, 0);
 	public static final File DEFAULT_DIRECTORY = new File("./");
 	
-	public static final String SAVE_CONFIRM_MSG = "ÀúÀå ÇÏ½Ã°Ú½À´Ï±î?";
-	public static final String SAVE_CONFIRM_TITLE = "ÀúÀå È®ÀÎ";
+	public static final String SAVE_CONFIRM_MSG = "ì €ì¥ í•˜ì‹œê² ìŠµë‹ˆê¹Œ?";
+	public static final String SAVE_CONFIRM_TITLE = "ì €ì¥ í™•ì¸";
 	
 	public static String defaulttheme = "com.jtattoo.plaf.fast.FastLookAndFeel";
 	
@@ -71,9 +71,9 @@ public class GConstants {
 	}
 	
 	public enum EMenubar {
-		eFile(new GFileMenu("ÆÄÀÏ")),
-		eEdit(new GEditMenu("ÆíÁı")),
-		eColor(new GColorMenu("ÄÃ·¯"));
+		eFile(new GFileMenu("íŒŒì¼")),
+		eEdit(new GEditMenu("í¸ì§‘")),
+		eColor(new GColorMenu("ì»¬ëŸ¬"));
 		
 		private GMenu menu;
 		private EMenubar(GMenu menu) {this.menu = menu;}		
@@ -103,7 +103,7 @@ public class GConstants {
 		public String getActionCommand() {return this.actionCommand;}
 	}
 	public enum EThemechangeMenu {
-		eSetTheme("Å×¸¶¼³Á¤","setTheme"), eClearTheme("Å×¸¶ ÃÊ±âÈ­","com.jtattoo.plaf.mint.MintLookAndFeel");
+		eSetTheme("í…Œë§ˆì„¤ì •","setTheme"), eClearTheme("í…Œë§ˆ ì´ˆê¸°í™”","com.jtattoo.plaf.mint.MintLookAndFeel");
 		private String title;
 		private String actionCommand;
 		private EThemechangeMenu(String title, String actionCommand) {
@@ -114,13 +114,13 @@ public class GConstants {
 		public String getActionCommand() {return this.actionCommand;}
 	}
 	public enum EFileMenu implements EMenu{
-		eNew("»õ¹®¼­", "nnew", KeyStroke.getKeyStroke('N', InputEvent.CTRL_DOWN_MASK)),
-		eOpen("¿­±â", "open", KeyStroke.getKeyStroke('O', InputEvent.CTRL_DOWN_MASK)),
-		eSave("ÀúÀå", "save", KeyStroke.getKeyStroke('S', InputEvent.CTRL_DOWN_MASK)),
-		eSaveAs("´Ù¸¥ÀÌ¸§À¸·Î ÀúÀå", "saveAs", KeyStroke.getKeyStroke('V', InputEvent.ALT_DOWN_MASK)),
-		eImage("ÀÌ¹ÌÁö ¿­±â", "imageOpen", null),
-		ePrint("ÇÁ¸°Æ®","print", KeyStroke.getKeyStroke('P', InputEvent.CTRL_DOWN_MASK)),
-		eExit("Á¾·á", "exit", null);
+		eNew("ìƒˆë¬¸ì„œ", "nnew", KeyStroke.getKeyStroke('N', InputEvent.CTRL_DOWN_MASK)),
+		eOpen("ì—´ê¸°", "open", KeyStroke.getKeyStroke('O', InputEvent.CTRL_DOWN_MASK)),
+		eSave("ì €ì¥", "save", KeyStroke.getKeyStroke('S', InputEvent.CTRL_DOWN_MASK)),
+		eSaveAs("ë‹¤ë¥¸ì´ë¦„ìœ¼ë¡œ ì €ì¥", "saveAs", KeyStroke.getKeyStroke('V', InputEvent.ALT_DOWN_MASK)),
+		eImage("ì´ë¯¸ì§€ ì—´ê¸°", "imageOpen", null),
+		ePrint("í”„ë¦°íŠ¸","print", KeyStroke.getKeyStroke('P', InputEvent.CTRL_DOWN_MASK)),
+		eExit("ì¢…ë£Œ", "exit", null);
 		
 		private String title;
 		private String actionCommand;
@@ -135,8 +135,8 @@ public class GConstants {
 		public KeyStroke getKeyStroke() {return this.keyStroke;}
 	}
 	public enum EforwardMenu{
-		eForward("¾ÕÀ¸·Î °¡Á®¿À±â", "forward", KeyStroke.getKeyStroke('F', InputEvent.CTRL_DOWN_MASK)),
-		eSForward("¸Ç ¾ÕÀ¸·Î °¡Á®¿À±â", "sForward", KeyStroke.getKeyStroke('F', InputEvent.CTRL_DOWN_MASK^InputEvent.SHIFT_DOWN_MASK));
+		eForward("ì•ìœ¼ë¡œ ê°€ì ¸ì˜¤ê¸°", "forward", KeyStroke.getKeyStroke('F', InputEvent.CTRL_DOWN_MASK)),
+		eSForward("ë§¨ ì•ìœ¼ë¡œ ê°€ì ¸ì˜¤ê¸°", "sForward", KeyStroke.getKeyStroke('F', InputEvent.CTRL_DOWN_MASK^InputEvent.SHIFT_DOWN_MASK));
 		private String title;
 		private String actionCommand;
 		private KeyStroke keyStroke;
@@ -150,8 +150,8 @@ public class GConstants {
 		public KeyStroke getKeyStroke() {return this.keyStroke;}
 	}
 	public enum EbackwardMenu{
-		eBackward("µÚ·Î º¸³»±â", "backward", KeyStroke.getKeyStroke('B', InputEvent.CTRL_DOWN_MASK)),
-		eSBackward("¸Ç µÚ·Î º¸³»±â", "sBackward", KeyStroke.getKeyStroke('B', InputEvent.CTRL_DOWN_MASK^InputEvent.SHIFT_DOWN_MASK));
+		eBackward("ë’¤ë¡œ ë³´ë‚´ê¸°", "backward", KeyStroke.getKeyStroke('B', InputEvent.CTRL_DOWN_MASK)),
+		eSBackward("ë§¨ ë’¤ë¡œ ë³´ë‚´ê¸°", "sBackward", KeyStroke.getKeyStroke('B', InputEvent.CTRL_DOWN_MASK^InputEvent.SHIFT_DOWN_MASK));
 		private String title;
 		private String actionCommand;
 		private KeyStroke keyStroke;
@@ -166,15 +166,15 @@ public class GConstants {
 		
 	}
 	public enum EEditMenu implements EMenu{
-		eUndo("µÇµ¹¸®±â", "undo", KeyStroke.getKeyStroke('Z', InputEvent.CTRL_DOWN_MASK)),
-		eRedo("´Ù½Ã½ÇÇà", "redo", KeyStroke.getKeyStroke('Z', InputEvent.CTRL_DOWN_MASK^InputEvent.SHIFT_DOWN_MASK)),
-		eCopy("º¹»ç", "copy", KeyStroke.getKeyStroke('C', InputEvent.CTRL_DOWN_MASK)),
-		eCut("ÀÚ¸£±â", "cut", KeyStroke.getKeyStroke('X', InputEvent.CTRL_DOWN_MASK)),
-		ePaste("ºÙ¿©³Ö±â", "paste", KeyStroke.getKeyStroke('V', InputEvent.CTRL_DOWN_MASK)),
-		eForward("¾ÕÀ¸·Î °¡Á®¿À±â", "forward", KeyStroke.getKeyStroke('F', InputEvent.CTRL_DOWN_MASK)),
-		eBackward("µÚ·Î º¸³»±â", "backward", KeyStroke.getKeyStroke('B', InputEvent.CTRL_DOWN_MASK)),
-		eGroup("±×·ì", "group", KeyStroke.getKeyStroke('G', InputEvent.CTRL_DOWN_MASK)),
-		eUnGroup("±×·ì ÇØÁ¦", "ungroup", KeyStroke.getKeyStroke('G', InputEvent.CTRL_DOWN_MASK^InputEvent.SHIFT_DOWN_MASK));
+		eUndo("ë˜ëŒë¦¬ê¸°", "undo", KeyStroke.getKeyStroke('Z', InputEvent.CTRL_DOWN_MASK)),
+		eRedo("ë‹¤ì‹œì‹¤í–‰", "redo", KeyStroke.getKeyStroke('Z', InputEvent.CTRL_DOWN_MASK^InputEvent.SHIFT_DOWN_MASK)),
+		eCopy("ë³µì‚¬", "copy", KeyStroke.getKeyStroke('C', InputEvent.CTRL_DOWN_MASK)),
+		eCut("ìë¥´ê¸°", "cut", KeyStroke.getKeyStroke('X', InputEvent.CTRL_DOWN_MASK)),
+		ePaste("ë¶™ì—¬ë„£ê¸°", "paste", KeyStroke.getKeyStroke('V', InputEvent.CTRL_DOWN_MASK)),
+		eForward("ì•ìœ¼ë¡œ ê°€ì ¸ì˜¤ê¸°", "forward", KeyStroke.getKeyStroke('F', InputEvent.CTRL_DOWN_MASK)),
+		eBackward("ë’¤ë¡œ ë³´ë‚´ê¸°", "backward", KeyStroke.getKeyStroke('B', InputEvent.CTRL_DOWN_MASK)),
+		eGroup("ê·¸ë£¹", "group", KeyStroke.getKeyStroke('G', InputEvent.CTRL_DOWN_MASK)),
+		eUnGroup("ê·¸ë£¹ í•´ì œ", "ungroup", KeyStroke.getKeyStroke('G', InputEvent.CTRL_DOWN_MASK^InputEvent.SHIFT_DOWN_MASK));
 		
 		private String title;
 		private String actionCommand;
@@ -189,8 +189,8 @@ public class GConstants {
 		public KeyStroke getKeyStroke() {return this.keyStroke;}
 	}
 	public enum EColorMenu implements EMenu{
-		eLineColor("¶óÀÎ »ö","setLineColor", KeyStroke.getKeyStroke('L', InputEvent.CTRL_DOWN_MASK)),
-		eFillColor("Ã¤¿ì±â »ö","setFillColor", KeyStroke.getKeyStroke('L', InputEvent.CTRL_DOWN_MASK^InputEvent.SHIFT_DOWN_MASK));
+		eLineColor("ë¼ì¸ ìƒ‰","setLineColor", KeyStroke.getKeyStroke('L', InputEvent.CTRL_DOWN_MASK)),
+		eFillColor("ì±„ìš°ê¸° ìƒ‰","setFillColor", KeyStroke.getKeyStroke('L', InputEvent.CTRL_DOWN_MASK^InputEvent.SHIFT_DOWN_MASK));
 		
 		private String title;
 		private String actionCommand;
@@ -205,7 +205,7 @@ public class GConstants {
 		public KeyStroke getKeyStroke() {return this.keyStroke;}
 	}	
 	public enum eToolOption {
-		eToolOption("µµÇü ¼Ó¼º","toolOption");
+		eToolOption("ë„í˜• ì†ì„±","toolOption");
 		
 		private String title;
 		private String actionCommand;
@@ -234,8 +234,8 @@ public class GConstants {
 		public GShape getTool() {return this.tool;}
 	}
 	public enum EToolPanel_Panel {
-		eFillPanel(new JPanel(),"Ã¤¿ì±â"),		
-		eLinePanel(new JPanel(),"¼±¼Ó¼º");
+		eFillPanel(new JPanel(),"ì±„ìš°ê¸°"),		
+		eLinePanel(new JPanel(),"ì„ ì†ì„±");
 		
 		private JPanel panel;
 		private String panelName;
@@ -247,15 +247,15 @@ public class GConstants {
 		public String getPanelName() {return this.panelName;}
 	}
 	public enum EToolPanel_label {
-		eTitle(new JLabel("µµÇü ¼­½Ä"), new Rectangle(12,10,89,36),"bg"),
-		eFilloption(new JLabel("Ã¤¿ì±â"), new Rectangle(8, 10, 57, 15),"fill"),
-		eFillColor(new JLabel("»ö"), new Rectangle(8, 116, 57, 15),"fill"),
-		eFilltp_l(new JLabel("Åõ¸íµµ"), new Rectangle(8, 166, 57, 22),"fill"),
-		eLineOption(new JLabel("¼±"), new Rectangle(8, 10, 57, 15),"line"),
-		eLineColor(new JLabel("»ö"), new Rectangle(8, 116, 57, 15),"line"),
-		eLinetp_l(new JLabel("Åõ¸íµµ"), new Rectangle(8, 166, 57, 22),"line"),
-		eThick_l(new JLabel("µÎ²²"), new Rectangle(8, 233, 57, 15),"line"),
-		eDash_l(new JLabel("´ë½Ã Á¾·ù"), new Rectangle(8, 287, 57, 15),"line");
+		eTitle(new JLabel("ë„í˜• ì„œì‹"), new Rectangle(12,10,89,36),"bg"),
+		eFilloption(new JLabel("ì±„ìš°ê¸°"), new Rectangle(8, 10, 57, 15),"fill"),
+		eFillColor(new JLabel("ìƒ‰"), new Rectangle(8, 116, 57, 15),"fill"),
+		eFilltp_l(new JLabel("íˆ¬ëª…ë„"), new Rectangle(8, 166, 57, 22),"fill"),
+		eLineOption(new JLabel("ì„ "), new Rectangle(8, 10, 57, 15),"line"),
+		eLineColor(new JLabel("ìƒ‰"), new Rectangle(8, 116, 57, 15),"line"),
+		eLinetp_l(new JLabel("íˆ¬ëª…ë„"), new Rectangle(8, 166, 57, 22),"line"),
+		eThick_l(new JLabel("ë‘ê»˜"), new Rectangle(8, 233, 57, 15),"line"),
+		eDash_l(new JLabel("ëŒ€ì‹œ ì¢…ë¥˜"), new Rectangle(8, 287, 57, 15),"line");
 		private JLabel label;
 		private Rectangle bounds;
 		private String panelName;
@@ -269,7 +269,7 @@ public class GConstants {
 		public String getPanelName() {return this.panelName;}
 	}
 	public enum EToolPanel_Button {
-		eCloseBtn(new JButton("´İ±â"), new Rectangle(240, 10, 50, 23),"bg"),
+		eCloseBtn(new JButton("ë‹«ê¸°"), new Rectangle(240, 10, 50, 23),"bg"),
 		eFillColorBtn(new JButton(), new Rectangle(152, 113, 97, 23),"fill"),
 		eLinecolorBtn( new JButton(), new Rectangle(152, 113, 97, 23),"line");
 		private JButton button;
@@ -285,10 +285,10 @@ public class GConstants {
 		public String getPanelName() {return this.panelName;}
 	}
 	public enum EToolPanel_RadioBtn {
-		eNoFillBtn(new JRadioButton("Ã¤¿ì±â ¾øÀ½"), new Rectangle(8, 31, 121, 23),"fill"),
-		eFillBtn(new JRadioButton("´Ü»ö Ã¤¿ì±â"), new Rectangle(8, 58, 121, 23),"fill"),
-		eNoLineBtn( new JRadioButton("¼± ¾øÀ½"), new Rectangle(8, 31, 121, 23),"line"),
-		eLineBtn( new JRadioButton("¼± ¼Ó¼º"), new Rectangle(8, 58, 121, 23),"line");
+		eNoFillBtn(new JRadioButton("ì±„ìš°ê¸° ì—†ìŒ"), new Rectangle(8, 31, 121, 23),"fill"),
+		eFillBtn(new JRadioButton("ë‹¨ìƒ‰ ì±„ìš°ê¸°"), new Rectangle(8, 58, 121, 23),"fill"),
+		eNoLineBtn( new JRadioButton("ì„  ì—†ìŒ"), new Rectangle(8, 31, 121, 23),"line"),
+		eLineBtn( new JRadioButton("ì„  ì†ì„±"), new Rectangle(8, 58, 121, 23),"line");
 		private JRadioButton radioBtn;
 		private Rectangle bounds;
 		private String panelName;
@@ -337,7 +337,7 @@ public class GConstants {
 	public enum ECursor {
 		eDefault(new Cursor(Cursor.DEFAULT_CURSOR)),
 		eMove(new Cursor(Cursor.MOVE_CURSOR)),
-		eRotate(new Cursor(Cursor.HAND_CURSOR)), // Ãß°¡
+		eRotate(new Cursor(Cursor.HAND_CURSOR)), // ì¶”ê°€
 		eEE(new Cursor(Cursor.E_RESIZE_CURSOR)),
 		eWW(new Cursor(Cursor.W_RESIZE_CURSOR)),
 		eNN(new Cursor(Cursor.N_RESIZE_CURSOR)),
